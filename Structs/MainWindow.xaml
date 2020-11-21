@@ -1,0 +1,33 @@
+﻿<Window x:Class="Structs.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Structs"
+        mc:Ignorable="d"
+        Title="Структуры" Height="450" Width="800" Background="Yellow">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0.2*"/>
+            <RowDefinition/>
+            <RowDefinition Height="0.2*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <TextBox x:Name="Count" Grid.Row="0" Grid.Column="0" Margin="10 10 10 10" Background="White"/>
+        <ListBox x:Name="List" Grid.Row="1" Grid.Column="0" Margin="10 10 10 10" Background="White" SelectionChanged="List_SelectionChanged"/>
+        <Button Content="Добавить" Grid.Row="2" Grid.Column="0" Margin="50 10 50 10" Click="Button_Click"/>
+        <GroupBox Header="Данные о пользователе" Grid.RowSpan="3" Grid.Column="1" Height="200">
+            <StackPanel Orientation="Vertical">
+                <TextBox x:Name="Name" Height="50" Margin="10 10 10 10" Background="White"/>
+                <TextBox x:Name="Age" Height="50" Margin="10 10 10 10" Background="white"/>
+            </StackPanel>
+        </GroupBox>
+        <StackPanel Orientation="Horizontal" Grid.Row="0" Grid.Column="1">
+            <Button Content="Средний возраст" Margin="10 10 10 10" Click="Button_Click_1"/>
+            <Button Content="По возрастанию возраста" Margin="10 10 10 10" Click="Button_Click_2" />
+        </StackPanel>
+      </Grid>
+</Window>
